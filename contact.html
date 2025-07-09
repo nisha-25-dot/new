@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <Form onsubmit="validateCheckbox()">
+        <label for="">Name</label><br>
+        <input type="text" id="username"><br><br>
+        <label for="">Email</label><br>
+        <input type="email" id="useremail"><br><br>
+         <label for="">Number</label><br>
+        <input type="cell" id="usercell"><br><br>
+         <label for="">Address</label><br>
+       <textarea name="" id="userarea"></textarea><br><br>
+       <input type="checkbox" id="check">check me out <br><br>
+       <button  onclick="test" type="submit">Submit</button>
+    </Form>
+</body>
+<script>
+    function validateCheckbox(){
+        var a = document.getElementById('username').value.trim();
+        var b = document.getElementById('useremail').value.trim();
+        var c = document.getElementById('usercell').value.trim();
+        var d = document.getElementById('userarea').value.trim();
+        var e = document.getElementById('check');
+
+        if(a ==""|| b ==""|| c ==""|| d ==""|| !e.checked){
+            window.alert('Invalid Input');
+        } else{
+            window.alert('Success Input');
+        }
+    }
+</script>
+</html>
